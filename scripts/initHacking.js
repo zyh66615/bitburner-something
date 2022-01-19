@@ -11,7 +11,6 @@ const filesToDownload = [
   'runHacking.js',
   'find.js',
 ]
-const token = 'GHSAT0AAAAAABNDHXH652VCEXLRBYCSH4YEYPQ6NEQ'
 const valuesToRemove = ['BB_SERVER_MAP']
 
 function localeHHMMSS(ms = 0) {
@@ -38,7 +37,7 @@ export async function main(ns) {
     await ns.rm(filename)
     await ns.sleep(200)
     ns.tprint(`[${localeHHMMSS()}] Trying to download ${path}`)
-    await ns.wget(path + '?token=' + token, filename)
+    await ns.wget(path + '?ts=' + new Date().getTime(), filename)
   }
 
   valuesToRemove.map((value) => localStorage.removeItem(value))
