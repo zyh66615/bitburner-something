@@ -1,4 +1,4 @@
-const baseUrl = 'https://raw.githubusercontent.com/moriakaice/bitburner/master/src/'
+const baseUrl = 'https://raw.githubusercontent.com/zyh66615/bitburner-something/main/scripts/'
 const filesToDownload = [
   'common.js',
   'mainHack.js',
@@ -11,6 +11,7 @@ const filesToDownload = [
   'runHacking.js',
   'find.js',
 ]
+const token = 'GHSAT0AAAAAABNDHXH652VCEXLRBYCSH4YEYPQ6NEQ'
 const valuesToRemove = ['BB_SERVER_MAP']
 
 function localeHHMMSS(ms = 0) {
@@ -37,7 +38,7 @@ export async function main(ns) {
     await ns.rm(filename)
     await ns.sleep(200)
     ns.tprint(`[${localeHHMMSS()}] Trying to download ${path}`)
-    await ns.wget(path + '?ts=' + new Date().getTime(), filename)
+    await ns.wget(path + '?token=' + token, filename)
   }
 
   valuesToRemove.map((value) => localStorage.removeItem(value))
