@@ -1,5 +1,5 @@
 const settings = {
-    mapRefreshInterval: 24 * 60 * 60 * 1000,
+    mapRefreshInterval: 1 * 60 * 60 * 1000,
     keys: {
       serverMap: 'BB_SERVER_MAP',
     },

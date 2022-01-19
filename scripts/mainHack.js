@@ -7,7 +7,7 @@ const settings = {
     maxMoneyMultiplayer: 0.8,
     minSecurityWeight: 100,
     mapRefreshInterval: 1 * 60 * 60 * 1000,
-    maxWeakenTime: 5 * 60 * 1000,
+    maxWeakenTime: 10 * 60 * 1000,
     keys: {
       serverMap: 'BB_SERVER_MAP',
     },
@@ -180,8 +180,8 @@ const settings = {
       const growTime = ns.getGrowTime(bestTarget)
       const weakenTime = ns.getWeakenTime(bestTarget)
   
-      const growDelay = Math.max(0, weakenTime - growTime - 15 )
-      const hackDelay = Math.max(0, growTime + growDelay - hackTime - 15)
+      const growDelay = Math.max(0, weakenTime - growTime - 15 * 1000 )
+      const hackDelay = Math.max(0, growTime + growDelay - hackTime - 15 * 1000)
   
       const securityLevel = ns.getServerSecurityLevel(bestTarget)
       const money = ns.getServerMoneyAvailable(bestTarget)

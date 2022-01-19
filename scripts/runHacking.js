@@ -17,7 +17,7 @@ function localeHHMMSS(ms = 0) {
   
     const homeRam = ns.getServerRam('home').shift()
   
-    if (homeRam >= 32) {
+    if (homeRam >= 64) {
       ns.tprint(`[${localeHHMMSS()}] Spawning spider.js`)
       await ns.run('spider.js', 1, 'mainHack.js')
       await ns.sleep(3000)
