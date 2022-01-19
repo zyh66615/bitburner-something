@@ -1,12 +1,12 @@
 const settings = {
-    homeRamReserved: 20,
-    homeRamReservedBase: 20,
-    homeRamExtraRamReserved: 12,
+    homeRamReserved: 10,
+    homeRamReservedBase: 10,
+    homeRamExtraRamReserved: 5,
     homeRamBigMode: 64,
     minSecurityLevelOffset: 1,
-    maxMoneyMultiplayer: 0.9,
+    maxMoneyMultiplayer: 0.8,
     minSecurityWeight: 100,
-    mapRefreshInterval: 24 * 60 * 60 * 1000,
+    mapRefreshInterval: 1 * 60 * 60 * 1000,
     maxWeakenTime: 5 * 60 * 1000,
     keys: {
       serverMap: 'BB_SERVER_MAP',
