@@ -83,7 +83,7 @@ const settings = {
     return purchasedServers
   }
   
-  export async function main(ns) {
+ /** @param {NS} ns **/export async function main(ns) {
     ns.tprint(`[${localeHHMMSS()}] Starting playerServers.js`)
   
     settings.maxGbRam = ns.getPurchasedServerMaxRam()

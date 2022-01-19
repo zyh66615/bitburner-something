@@ -33,7 +33,7 @@ function localeHHMMSS(ms = 0) {
   return new Date(ms).toLocaleTimeString()
 }
 
-export async function main(ns) {
+/** @param {NS} ns **/export async function main(ns) {
   ns.tprint(`[${localeHHMMSS()}] Starting spider.js`)
 
   const scriptToRunAfter = ns.args[0]

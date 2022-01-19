@@ -42,7 +42,7 @@ const settings = {
     return jumps.reverse().join('; connect ')
   }
   
-  export async function main(ns) {
+/** @param {NS} ns **/ export async function main(ns) {
     ns.tprint(`[${localeHHMMSS()}] Starting find.js`)
   
     const serverToFind = ns.args[0]

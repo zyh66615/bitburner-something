@@ -1,4 +1,4 @@
-export async function main(ns) {
+/** @param {NS} ns **/export async function main(ns) {
     const target = ns.args[0]
     const threads = ns.args[1]
     const delay = ns.args[2]

@@ -22,7 +22,7 @@ export function settings() {
     localStorage.setItem(key, JSON.stringify(value))
   }
   
-  export async function main(ns) {
+/** @param {NS} ns **/export async function main(ns) {
     return {
       settings,
       getItem,

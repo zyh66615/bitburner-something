@@ -31,7 +31,7 @@ const settings = {
     return new Date(ms).toLocaleTimeString()
   }
   
-  export async function main(ns) {
+/** @param {NS} ns **/export async function main(ns) {
     ns.tprint(`[${localeHHMMSS()}] Starting killAll.js`)
   
     const scriptToRunAfter = ns.args[0]
