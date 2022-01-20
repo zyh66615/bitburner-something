@@ -2,7 +2,7 @@ import { settings, setItem } from 'common.js'
 
 const hackPrograms = ['BruteSSH.exe', 'FTPCrack.exe', 'relaySMTP.exe', 'HTTPWorm.exe', 'SQLInject.exe']
 
-function getPlayerDetails(ns) {
+export function getPlayerDetails(ns) {
   let portHacks = 0
 
   hackPrograms.forEach((hackProgram) => {
