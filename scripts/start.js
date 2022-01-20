@@ -5,7 +5,7 @@
   
     await ns.wget(
       `https://raw.githubusercontent.com/zyh66615/bitburner-something/main/scripts/initHacking.js?ts=${new Date().getTime()}`,
-      "initHacking.ns"
+      "initHacking.js"
     );
-    ns.spawn("initHacking.ns", 1);
+    ns.spawn("initHacking.js", 1);
   }

@@ -9,7 +9,7 @@ function getItem(key) {
     return item ? JSON.parse(item) : undefined
 }
 
-const excluedFiles = ['start.js', 'rm.js']
+const excluedFiles = ['start.js', 'rmfile.js']
 /** @param {NS} ns **/
 export async function main(ns) {
     const servers = getItem(settings.keys.serverMap).servers;
