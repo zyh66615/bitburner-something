@@ -7,12 +7,12 @@ const settings = {
     maxMoneyMultiplayer: 0.8,
     minSecurityWeight: 100,
     mapRefreshInterval: 2 * 60 * 60 * 1000,
-    maxWeakenTime: 30 * 60 * 1000,
+    maxWeakenTime: 10 * 60 * 1000,
     keys: {
       serverMap: 'BB_SERVER_MAP',
     },
     changes: {
-      hack: 0.001,
+      hack: 0.002,
       grow: 0.004,
       weaken: 0.05,
     },
