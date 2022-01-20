@@ -69,8 +69,7 @@ const settings = {
       ns.tprint(`[${localeHHMMSS()}] Spawning ${scriptToRunAfter}`)
       ns.spawn(scriptToRunAfter, 1)
     } else {
-      ns.tprint(`[${localeHHMMSS()}] Spawning runHacking.js`)
-      ns.spawn('runHacking.js', 1)
+      ns.tprint(`[${localeHHMMSS()}] You can run runHacking.js to start hack`)
     }
   }
   
