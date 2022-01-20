@@ -452,4 +452,5 @@ const settings = {
         await ns.sleep(10)
       }
     }
+    ns.tprint(`[${localeHHMMSS()}] contracter.js finished`)
   }
