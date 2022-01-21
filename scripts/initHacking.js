@@ -13,6 +13,9 @@ const filesToDownload = [
   'contracter.js',
   'seeAllStock.js',
   'rmfile.js',
+  'commitCrime.js',
+  'getCrimeData.js',
+  'getCrimeData2.js'
 ]
 const valuesToRemove = ['BB_SERVER_MAP']
 
