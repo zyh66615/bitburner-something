@@ -29,9 +29,11 @@ export async function main(ns) {
             if (portfolio.findIndex(obj => obj.sym === stock) !== -1) { //if we already have this stock
                 let i = portfolio.findIndex(obj => obj.sym === stock); // log index of symbol as i
                 if (ns.stock.getAskPrice(stock) >= portfolio[i].value * profitPercent) { // if the price is higher than what we bought it at +10% then we SELL
+                    ns.tprint('sell stock because of profit enough')
                     sellStock(stock);
                 }
                 else if (ns.stock.getForecast(stock) < forecastSell) {
+                    ns.tprint('sell stock because of forecastSell')
                     sellStock(stock);
                 }
             }
@@ -64,13 +66,12 @@ export async function main(ns) {
 
     function sellStock(stock) {
         let position = ns.stock.getPosition(stock);
-        var forecast = ns.stock.getForecast(stock);
-        if (forecast < 0.4) {
-            let i = portfolio.findIndex(obj => obj.sym === stock); //Find the stock info in the portfolio
-            ns.tprint('SOLD: ' + stock + 'shares: ' + portfolio.shares + ' price: ' + portfolio.value + 'earn: ' + (position[0] * position[1]) - (portfolio.shares * portfolio.value));
-            portfolio.splice(i, 1); // Remove the stock from portfolio
-            ns.stock.sell(stock, position[0]);
-        }
+
+        let i = portfolio.findIndex(obj => obj.sym === stock); //Find the stock info in the portfolio
+        ns.tprint('SOLD: ' + stock + 'shares: ' + portfolio.shares + ' price: ' + portfolio.value + 'earn: ' + (position[0] * position[1]) - (portfolio.shares * portfolio.value));
+        portfolio.splice(i, 1); // Remove the stock from portfolio
+        ns.stock.sell(stock, position[0]);
+
     };
 
     function stockBuyQuantCalc(stockPrice, stock, stockNum) { // Calculates how many shares to buy

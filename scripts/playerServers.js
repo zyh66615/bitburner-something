@@ -88,7 +88,7 @@ function getPurchasedServers(ns) {
 
   var maxRam = ns.getPurchasedServerMaxRam()
   var hostRam = ns.getServerMaxRam('home')
-  settings.maxGbRam = maxRam > hostRam * 32 ? hostRam * 32 : maxRam
+  settings.maxGbRam = min(maxRam, hostRam * 128)
   ns.tprint(`[${localeHHMMSS()}] hostRam: ` + hostRam + ' maxRam: ' + maxRam )
   settings.maxPlayerServers = ns.getPurchasedServerLimit()
   let hostname = ns.getHostname()
