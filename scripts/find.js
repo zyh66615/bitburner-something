@@ -111,6 +111,17 @@ function printPathToServer(servers, serverToFind) {
     ns.tprint(`* run4theh111z (Bitrunners faction)` + ' access: ' + rootAccess + ' hacking levels:' + requiredLevels + ' ports:' + requiredPorts + ' hackable:' + flag)
     ns.tprint(printPathToServer(serverMap.servers, 'run4theh111z') + '; backdoor;')
     ns.tprint('')
+
+    currentHost = 'w0r1d_d43m0n'
+    requiredLevels = ns.getServerRequiredHackingLevel(currentHost)
+    requiredPorts = ns.getServerNumPortsRequired(currentHost)
+    flag = currentLevels >= requiredLevels && currentPorts >= requiredPorts ? '√' : '×'
+    rootAccess = ns.hasRootAccess(currentHost)
+
+    ns.tprint(`* w0r1d_d43m0n (Bitrunners faction)` + ' access: ' + rootAccess + ' hacking levels:' + requiredLevels + ' ports:' + requiredPorts + ' hackable:' + flag)
+    ns.tprint(printPathToServer(serverMap.servers, 'w0r1d_d43m0n') + '; backdoor;')
+    ns.tprint('')
+
     ns.tprint(`[${localeHHMMSS()}] Looking for servers with coding contracts:`)
     Object.keys(serverMap.servers).forEach((hostname) => {
       const files = ns.ls(hostname)
