@@ -1,4 +1,4 @@
-import { formatMoney, formatNumberShort } from './helpers.js'
+import { formatMoney, formatNumberShort } from 'helpers.js'
 
 const max_spend_ratio = 0.1; // Don't spend more than this proportion of money
 
